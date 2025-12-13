@@ -11,6 +11,7 @@
 #include "game/hsfex.h"
 #include "game/objsub.h"
 #include "game/disp.h"
+#include "game/audio.h"
 
 #include "ext_math.h"
 
