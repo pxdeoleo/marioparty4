@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "game/data.h"
 #include "game/dvd.h"
 #include "game/gamework.h"
