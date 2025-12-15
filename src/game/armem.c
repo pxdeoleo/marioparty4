@@ -17,9 +17,9 @@ typedef struct ar_que_req {
     /* 0x24 */ void *dst;
 } ARQueReq; // Size 0x28
 
-static void ArqCallBack(u32 pointerToARQRequest);
+static void ArqCallBack(u64 pointerToARQRequest);
 static void ArqCallBackAM(uintptr_t pointerToARQRequest);
-static void ArqCallBackAMFileRead(u32 pointerToARQRequest);
+static void ArqCallBackAMFileRead(u64 pointerToARQRequest);
 
 static s32 ATTRIBUTE_ALIGN(32) preLoadBuf[16];
 static ARQueReq ARQueBuf[16];
@@ -223,7 +223,7 @@ u32 HuAR_DVDtoARAM(u32 dir) {
     return amemptr;
 }
 
-static void ArqCallBack(u32 pointerToARQRequest) {
+static void ArqCallBack(u64 pointerToARQRequest) {
     arqCnt--;
     (void)pointerToARQRequest; // required to match (return?)
 }
@@ -403,7 +403,7 @@ void *HuAR_ARAMtoMRAMFileRead(u32 dir, u32 num, HeapID heap) {
 
 #undef DIR_DATA
 
-static void ArqCallBackAMFileRead(u32 pointerToARQRequest) {
+static void ArqCallBackAMFileRead(u64 pointerToARQRequest) {
     arqCnt--;
     (void)pointerToARQRequest; // required to match (return?)
 }
