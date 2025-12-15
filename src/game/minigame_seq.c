@@ -13,6 +13,8 @@
 
 #include "game/minigame_seq.h"
 
+#include <stdlib.h>
+
 #include "ext_math.h"
 
 #include <string.h>
