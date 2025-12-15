@@ -7,6 +7,7 @@
 #include "game/board/player.h"
 #include "game/board/tutorial.h"
 #include "game/board/window.h"
+#include "game/board/com.h"
 #include "game/disp.h"
 #include "game/gamework_data.h"
 #include "game/hsfanim.h"
